@@ -6,12 +6,12 @@ on:
       sub_type:
         description: 'نوع ساب را انتخاب کنید'
         required: true
-        default: '1'
+        default: 'Raw / Base64'
         type: choice
         options:
-        - '1' # Raw / Base64
-        - '2' # Clash (YAML)
-        - '3' # JSON (Sing-box)
+        - 'Raw / Base64'
+        - 'Clash (YAML)'
+        - 'JSON (Sing-box)'
       sub_url:
         description: 'لینک ساب‌اسکریپشن ورودی'
         required: true
