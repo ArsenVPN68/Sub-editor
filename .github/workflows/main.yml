@@ -44,7 +44,7 @@ jobs:
 
     - name: Run Script
       run: |
-        python process.py "${{ github.event.inputs.sub_type }}" "${{ github.event.inputs.sub_url }}" "${{ github.event.inputs.custom_name }}"
+        python process.py "${{ github.event.inputs.sub_type }}" "${{ github.event.inputs.sub_url }}" "${{ github.event.inputs.custom_name }}" "${{ github.repository }}"
 
     - name: Commit and Push Changes
       run: |
@@ -52,5 +52,5 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git pull origin main --rebase
         git add .
-        git commit -m "Add new subscription file [skip ci]" || exit 0
+        git commit -m "Add new subscription file and QR code [skip ci]" || exit 0
         git push
