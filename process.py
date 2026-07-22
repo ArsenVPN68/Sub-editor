@@ -2,7 +2,6 @@ import base64
 import json
 import os
 import re
-import socket
 import sys
 import urllib.parse
 import urllib.request
@@ -44,10 +43,10 @@ def fetch_content(url):
       },
   )
   try:
-    with urllib.request.urlopen(req, timeout=10) as response:
+    with urllib.request.urlopen(req, timeout=15) as response:
       return response.read().decode("utf-8")
   except Exception as e:
-    print(f"⚠️ خطا در دریافت لینک {url}: {e}")
+    print(f"⚠️ خطا در دریافت {url}: {e}")
     return ""
 
 
@@ -61,23 +60,10 @@ def get_next_filename(folder_path, prefix="sub", extension=".txt"):
     count += 1
 
 
-def is_host_alive(host, port, timeout=2):
-  """تست پایه اتصال به آدرس و پورت سرور"""
-  try:
-    port = int(port)
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.settimeout(timeout)
-    result = sock.connect_ex((host, port))
-    sock.close()
-    return result == 0
-  except Exception:
-    return False
-
-
 # ==========================================
-# استخراج کانفیگ‌های RAW
+# ۱. پردازش RAW (Base64 / URIs)
 # ==========================================
-def extract_raw_configs(urls):
+def process_raw(urls, custom_name, repo_info):
   all_lines = []
   for url in urls:
     content = fetch_content(url).strip()
@@ -92,74 +78,173 @@ def extract_raw_configs(urls):
 
     all_lines.extend(lines)
 
-  return all_lines
-
-
-def rename_and_filter_raw(lines, custom_name):
-  processed = []
+  new_lines = []
   index = 1
-  for line in lines:
-    if "#" in line:
-      base_part = line.rsplit("#", 1)[0]
+
+  for line in all_lines:
+    if line.startswith(
+        ("vless://", "vmess://", "trojan://", "ss://", "socks://")
+    ):
+      base_part = line.rsplit("#", 1)[0] if "#" in line else line
       new_title = urllib.parse.quote(f"{custom_name} {index:02d}")
-      processed.append(f"{base_part}#{new_title}")
+      new_lines.append(f"{base_part}#{new_title}")
       index += 1
-    elif line.startswith(("vless://", "vmess://", "trojan://", "ss://")):
-      new_title = urllib.parse.quote(f"{custom_name} {index:02d}")
-      processed.append(f"{line}#{new_title}")
-      index += 1
-  return processed
 
-
-# ==========================================
-# پردازش اصلی (ادغام و ساخت تمام فرمت‌ها)
-# ==========================================
-def process_subscriptions(urls_text, custom_name, repo_info):
-  # جداسازی لینک‌های ورودی که با خط بعد یا فاصله جدا شده‌اند
-  urls = [u.strip() for u in re.split(r"[\n\r\s]+", urls_text) if u.strip()]
-
-  if not urls:
-    print("❌ هیچ لینکی دریافت نشد!")
-    return
-
-  print(f"🔄 در حال پردازش {len(urls)} لینک ورودی...")
-
-  # ۱. دریافت و ترکیب لینک‌های RAW
-  raw_lines = extract_raw_configs(urls)
-  final_raw_lines = rename_and_filter_raw(raw_lines, custom_name)
-
-  if not final_raw_lines:
+  if not new_lines:
     print("❌ هیچ کانفیگ معتبری یافت نشد!")
     return
 
-  # ۲. ذخیره فایل RAW
-  raw_filename = get_next_filename("sub-raw", "sub", ".txt")
-  raw_filepath = os.path.join("sub-raw", raw_filename)
-  result_text = "\n".join(final_raw_lines)
+  result_text = "\n".join(new_lines)
   encoded_result = base64.b64encode(result_text.encode("utf-8")).decode("utf-8")
 
-  with open(raw_filepath, "w", encoding="utf-8") as f:
+  filename = get_next_filename("sub-raw", "sub", ".txt")
+  filepath = os.path.join("sub-raw", filename)
+
+  with open(filepath, "w", encoding="utf-8") as f:
     f.write(encoded_result)
-  print(f"✅ ساب RAW ساخته شد ({len(final_raw_lines)} سرور): {raw_filepath}")
+
+  print(f"✅ ساب RAW جدید ساخته شد ({len(new_lines)} سرور): {filepath}")
 
   if repo_info:
-    raw_url = f"https://raw.githubusercontent.com/{repo_info}/main/sub-raw/{raw_filename}"
+    raw_url = f"https://raw.githubusercontent.com/{repo_info}/main/sub-raw/{filename}"
+    qr_path = os.path.join("sub-raw", f"{os.path.splitext(filename)[0]}_qr.png")
+    generate_qr(raw_url, qr_path)
+
+
+# ==========================================
+# ۲. پردازش CLASH (YAML بدون آسیب به ساختار)
+# ==========================================
+def process_clash(urls, custom_name, repo_info):
+  all_proxies = []
+
+  for url in urls:
+    content = fetch_content(url)
+    if not content:
+      continue
+    try:
+      data = yaml.safe_load(content)
+      if data and isinstance(data, dict) and "proxies" in data:
+        all_proxies.extend(data["proxies"])
+    except Exception as e:
+      print(f"⚠️ ارور در خواندن کلش از {url}: {e}")
+
+  if not all_proxies:
+    print("❌ هیچ پروکسی کلش معتبری پیدا نشد!")
+    return
+
+  index = 1
+  for proxy in all_proxies:
+    if isinstance(proxy, dict) and "name" in proxy:
+      proxy["name"] = f"{custom_name} {index:02d}"
+      index += 1
+
+  clash_config = {
+      "port": 7890,
+      "socks-port": 7891,
+      "allow-lan": True,
+      "mode": "rule",
+      "log-level": "info",
+      "profile": {"name": custom_name, "tracing": True},
+      "proxies": all_proxies,
+      "proxy-groups": [
+          {
+              "name": custom_name,
+              "type": "select",
+              "proxies": [p["name"] for p in all_proxies if "name" in p],
+          }
+      ],
+  }
+
+  filename = get_next_filename("sub-clash", "clash", ".yaml")
+  filepath = os.path.join("sub-clash", filename)
+
+  yaml_output = yaml.dump(
+      clash_config,
+      allow_unicode=True,
+      sort_keys=False,
+      default_flow_style=False,
+  )
+  header_comments = f"# profile-title: {custom_name}\n\n"
+
+  with open(filepath, "w", encoding="utf-8") as f:
+    f.write(header_comments + yaml_output)
+
+  print(f"✅ ساب Clash جدید ساخته شد: {filepath}")
+
+  if repo_info:
+    raw_url = f"https://raw.githubusercontent.com/{repo_info}/main/sub-clash/{filename}"
     qr_path = os.path.join(
-        "sub-raw", f"{os.path.splitext(raw_filename)[0]}_qr.png"
+        "sub-clash", f"{os.path.splitext(filename)[0]}_qr.png"
     )
     generate_qr(raw_url, qr_path)
 
 
 # ==========================================
-# دریافت پارامترها از اکشن گیت‌هاب
+# ۳. پردازش JSON (Sing-box)
+# ==========================================
+def process_json(urls, custom_name, repo_info):
+  all_outbounds = []
+
+  for url in urls:
+    content = fetch_content(url)
+    if not content:
+      continue
+    try:
+      data = json.loads(content)
+      outbounds = data.get("outbounds", []) if isinstance(data, dict) else data
+      if isinstance(outbounds, list):
+        all_outbounds.extend(outbounds)
+    except Exception as e:
+      print(f"⚠️ ارور در خواندن JSON از {url}: {e}")
+
+  if not all_outbounds:
+    print("❌ هیچ داده JSON معتبری پیدا نشد!")
+    return
+
+  index = 1
+  for item in all_outbounds:
+    if isinstance(item, dict) and "tag" in item:
+      item["tag"] = f"{custom_name} {index:02d}"
+      index += 1
+
+  final_json = {"remarks": custom_name, "outbounds": all_outbounds}
+
+  filename = get_next_filename("sub-json", "json", ".json")
+  filepath = os.path.join("sub-json", filename)
+
+  with open(filepath, "w", encoding="utf-8") as f:
+    json.dump(final_json, f, ensure_ascii=False, indent=2)
+
+  print(f"✅ ساب JSON جدید ساخته شد: {filepath}")
+
+  if repo_info:
+    raw_url = f"https://raw.githubusercontent.com/{repo_info}/main/sub-json/{filename}"
+    qr_path = os.path.join(
+        "sub-json", f"{os.path.splitext(filename)[0]}_qr.png"
+    )
+    generate_qr(raw_url, qr_path)
+
+
+# ==========================================
+# مدیریت اصلی ورودی‌ها
 # ==========================================
 if __name__ == "__main__":
   if len(sys.argv) > 3:
-    _ = sys.argv[1].strip()  # sub_type
-    sub_urls = sys.argv[2].strip()
+    sub_type = sys.argv[1].strip()
+    urls_text = sys.argv[2].strip()
     base_name = sys.argv[3].strip()
     repo_info = sys.argv[4].strip() if len(sys.argv) > 4 else None
 
-    process_subscriptions(sub_urls, base_name, repo_info)
+    # جداسازی لینک‌ها با خط بعد یا فاصله
+    urls = [u.strip() for u in re.split(r"[\n\r\s]+", urls_text) if u.strip()]
+
+    if "Raw" in sub_type or sub_type == "1":
+      process_raw(urls, base_name, repo_info)
+    elif "Clash" in sub_type or sub_type == "2":
+      process_clash(urls, base_name, repo_info)
+    elif "JSON" in sub_type or sub_type == "3":
+      process_json(urls, base_name, repo_info)
+    else:
+      print("❌ نوع ساب نامعتبر است!")
   else:
     print("❌ ورودی‌های کافی ارسال نشده است.")
