@@ -1,0 +1,1739 @@
+mixed-port: 7890
+ipv6: true
+allow-lan: false
+unified-delay: false
+log-level: warning
+mode: rule
+disable-keep-alive: false
+keep-alive-idle: 10
+keep-alive-interval: 15
+tcp-concurrent: true
+geo-auto-update: true
+geo-update-interval: 168
+external-controller: 127.0.0.1:9090
+external-controller-cors:
+  allow-origins:
+  - '*'
+  allow-private-network: true
+external-ui: ui
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  respect-rules: true
+  use-system-hosts: false
+  listen: 127.0.0.1:1053
+  ipv6: true
+  hosts:
+    round-term-bcb3.arsenlopez01.workers.dev:
+    - 172.67.186.64
+    - 104.21.76.32
+    - 2606:4700:3033::6815:4c20
+    - 2606:4700:3031::ac43:ba40
+  nameserver:
+  - https://round-term-bcb3.arsenlopez01.workers.dev/dns-query#✅ Selector
+  proxy-server-nameserver:
+  - 8.8.8.8#DIRECT
+  direct-nameserver:
+  - 8.8.8.8#DIRECT
+  direct-nameserver-follow-policy: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - +.lan
+  - +.local
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  strict-route: true
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  - tcp://any:53
+  mtu: 9000
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080
+      - 8880
+      - 2052
+      - 2082
+      - 2086
+      - 2095
+    TLS:
+      ports:
+      - 443
+      - 8443
+      - 2053
+      - 2083
+      - 2087
+      - 2096
+proxies:
+- name: 👑 queen 01
+  type: vless
+  server: arsenvpn68-5.panel1-cc4.workers.dev
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiYVlWOGpMZXhLcSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 02
+  type: vless
+  server: www.speedtest.net
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoieGlHZ1FEM1ljbSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 03
+  type: vless
+  server: 172.67.175.54
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoieTdFeHo2RTlnUUVHQyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 04
+  type: vless
+  server: 104.21.31.60
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicjhJdTVKSXdlVTI2SiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 05
+  type: vless
+  server: 2606:4700:3035::ac43:af36
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiY0t5bzJRdjV4NGJLYTIyIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 06
+  type: vless
+  server: 2606:4700:3030::6815:1f3c
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiSWZlOG90bWFxIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 07
+  type: vless
+  server: cf.877774.xyz
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoibVpiV25NR01zeFJQZElkIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 08
+  type: vless
+  server: hostgator.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQUVpYlVxNzFHcUNlY1VHIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 09
+  type: vless
+  server: ilovepdf.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMlVkVEp3dTRVIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 10
+  type: vless
+  server: repl.it
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQVRFRjRpWVAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 11
+  type: vless
+  server: digitalocean.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZWs4V2draUJTdDcwTmxGIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 12
+  type: vless
+  server: www.speedtest.net
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiczN0R2c4NjFqMkJCakV3ViIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 13
+  type: vless
+  server: replit.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoibUVFMU81UU5kZ20iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 14
+  type: vless
+  server: creativecommons.org
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQlBHWmpEQzY5TzZHNHMxIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 15
+  type: vless
+  server: hasura.io
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUEhyWmdZS05JIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 16
+  type: vless
+  server: chatpgt.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicXJhMzJqNzJuclpwYSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 17
+  type: vless
+  server: chatgpt.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiV21KR09tQmZmWVU0IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 18
+  type: vless
+  server: postman.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWng4M0ZtbWpiUGNUIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 19
+  type: vless
+  server: nuxtjs.org
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoib2p5bXJ0SHZTVkkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 20
+  type: vless
+  server: iherb.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQVFwYk5haVV2NmJncnAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 21
+  type: vless
+  server: cypress.io
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoickNwMkRBSm5PWXRiIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 22
+  type: vless
+  server: openai.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTVNBcUttemtqOTciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 23
+  type: vless
+  server: ip.sb
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiU0tTclVYbmEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 24
+  type: vless
+  server: jsfiddle.net
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiN1Blc3BDV1AwIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 25
+  type: vless
+  server: swagger.io
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTU9aUkF1NFhjdSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 26
+  type: vless
+  server: sky.rethinkdns.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMHVibG15RkpVIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 27
+  type: vless
+  server: codesandbox.io
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNks4SkFFY2FlIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 28
+  type: vless
+  server: coinbase.com
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoibjUyR0FlcW4ySWhFTCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 29
+  type: vless
+  server: sslip.io
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVm5kREVMaWJsaW53IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 30
+  type: vless
+  server: 104.18.171.185
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoieGJxMElHNVB2cSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 31
+  type: vless
+  server: 104.18.136.230
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicWgxTW4yVk0iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 32
+  type: vless
+  server: 104.21.194.193
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQ2ZIQjg2NkgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 33
+  type: vless
+  server: 172.64.156.232
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoibnN0ckx4QzhHT1JtU1kiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 34
+  type: vless
+  server: 104.16.91.73
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoieVkwbFNmRFU4YTg4RnNwIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 35
+  type: vless
+  server: 104.21.65.183
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiSmFmS2RRSTFORURWTXNMIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 36
+  type: vless
+  server: 104.24.80.96
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiR3ZYM0xOTHpWQkNOTiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 37
+  type: vless
+  server: 104.16.66.163
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiSjdXMkVaUTBvViIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 38
+  type: vless
+  server: 104.25.97.238
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiY3RJVGt4M1pFIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 39
+  type: vless
+  server: 104.19.198.87
+  port: 8880
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNGpJY2Vaa2VXbEdRN25YIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 40
+  type: vless
+  server: arsenvpn68-5.panel1-cc4.workers.dev
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARSenvpn68-5.panEl1-cC4.workERs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoieEhxWngzVFpMaEtzIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 41
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARsENVPN68-5.PAnEl1-cc4.workers.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZU5QSkNUdWIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 42
+  type: vless
+  server: 172.67.175.54
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARsenVpn68-5.PANeL1-Cc4.WoRkErs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTHQ0Q3lnMW1Zek9RZyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 43
+  type: vless
+  server: 104.21.31.60
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ArsENVPn68-5.PANEL1-Cc4.worKerS.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRzVORVZiRVMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 44
+  type: vless
+  server: 2606:4700:3035::ac43:af36
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRSEnVpN68-5.PANEL1-CC4.worKErS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWnIydlRhbG9mdCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 45
+  type: vless
+  server: 2606:4700:3030::6815:1f3c
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: arsenvpn68-5.paNEL1-Cc4.woRKERs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZEp3bDIwVktUb3F2IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 46
+  type: vless
+  server: cf.877774.xyz
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRsENVpn68-5.PAnEl1-cc4.wORKerS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoid0pZb2VRTlI1TE9sWFBBIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 47
+  type: vless
+  server: hostgator.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRsenVPN68-5.PANEl1-CC4.WORkerS.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTnFubzQ5UFgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 48
+  type: vless
+  server: ilovepdf.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRSenvpN68-5.pAnEL1-cc4.worKErS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVHRRS1ZvcnYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 49
+  type: vless
+  server: repl.it
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARsENvPN68-5.PAnEL1-cc4.worKERS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNXNCSFhNczdZTk8iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 50
+  type: vless
+  server: digitalocean.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARSENVPN68-5.panEl1-cC4.WoRKERs.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWGwwakxPeDVRcjA3YSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 51
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARseNVpN68-5.paneL1-cc4.WoRKeRs.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoianNsdzZJYXlMODBOZ2lPIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 52
+  type: vless
+  server: replit.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARSenVPn68-5.PaneL1-Cc4.WOrKers.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRVJINDE5aWVkWWciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 53
+  type: vless
+  server: creativecommons.org
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRsenvpn68-5.PaNeL1-CC4.workeRS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoia3FRaldySDAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 54
+  type: vless
+  server: hasura.io
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRseNVPn68-5.pAnEL1-cC4.worKErs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVUR3ekdCNE95a2FmNiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 55
+  type: vless
+  server: chatpgt.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRsENVpN68-5.PanEl1-cc4.wOrKErS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiYVJxc0tpUWJLRjlDIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 56
+  type: vless
+  server: chatgpt.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARsENvpn68-5.PanEL1-CC4.WOrKeRS.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicWh5N3BTM2hWVnFxS1QiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 57
+  type: vless
+  server: postman.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ArseNVPn68-5.PANel1-cC4.woRKErS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiSjJLZkJtMHRZRkE1RHdwRSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 58
+  type: vless
+  server: nuxtjs.org
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ArseNvPn68-5.pAnEL1-cC4.woRkERs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWU12NjNORzJDUUNQRHAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 59
+  type: vless
+  server: iherb.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ArseNVpN68-5.Panel1-cC4.WORkErs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZEdLQUVGWGFENHo3ZDUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 60
+  type: vless
+  server: cypress.io
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRseNvpn68-5.PANel1-cc4.wORKeRs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMkswNzRNZW9qQk8wVCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 61
+  type: vless
+  server: openai.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRSenvpn68-5.pAnEl1-cc4.WoRkeRs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiczlNekFjdXZNTTFVTkR6IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 62
+  type: vless
+  server: ip.sb
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: arsENVpN68-5.PaNel1-CC4.wOrKerS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRnlRRmhjbGR6IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 63
+  type: vless
+  server: jsfiddle.net
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRsEnVPN68-5.PanEl1-CC4.WoRKers.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoidnJHdklKUzF5IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 64
+  type: vless
+  server: swagger.io
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRsEnvpn68-5.panEL1-Cc4.wOrkerS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiaDQ4U2drZkYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 65
+  type: vless
+  server: sky.rethinkdns.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRseNvpn68-5.pAnEL1-cc4.WoRKerS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQkppaDI2MXJydzZlcXkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 66
+  type: vless
+  server: codesandbox.io
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: arSeNvpN68-5.pAnEl1-Cc4.woRkErS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQjZwUlRmalJ1V0kiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 67
+  type: vless
+  server: coinbase.com
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ArsEnVpN68-5.PaneL1-Cc4.wOrKerS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiOHlXTk91RURrIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 68
+  type: vless
+  server: sslip.io
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ArSENVpN68-5.paneL1-CC4.WoRKers.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiT3M2aUtnSFN6UDRZTCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 69
+  type: vless
+  server: 104.18.171.185
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: arsEnvPN68-5.pAnel1-cc4.wOrkerS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiM3dRc252b0hnQjFjQ2IzMiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 70
+  type: vless
+  server: 104.18.136.230
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ArSENVpN68-5.pAneL1-CC4.WORkERs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZ1cwUFgxYzdJM2hkWCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 71
+  type: vless
+  server: 104.21.194.193
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: arSEnvpN68-5.PAneL1-Cc4.WorKers.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWlpiUHlsSWIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 72
+  type: vless
+  server: 172.64.156.232
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRseNvpn68-5.PaNEl1-Cc4.WoRkeRS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoidmhaUjFlZlpjNDIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 73
+  type: vless
+  server: 104.16.91.73
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARSEnvpn68-5.PAneL1-cc4.WoRKeRs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMUtYZjNmY3QzMTNxOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 74
+  type: vless
+  server: 104.21.65.183
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: arsEnvpn68-5.Panel1-Cc4.WoRKers.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVGxoN2pKeTgzRkI1bU9zIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiMjMuOTUuNTYuMTk1Il19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 75
+  type: vless
+  server: 104.24.80.96
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRSENVpn68-5.paNEl1-Cc4.WoRKeRS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiaEd6NXpXeVQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 76
+  type: vless
+  server: 104.16.66.163
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRSenVPn68-5.PaNEl1-cC4.woRkERS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiaG5MaDZoRUIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 77
+  type: vless
+  server: 104.25.97.238
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: aRSEnvPN68-5.PANeL1-CC4.woRkeRS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWlBOS3lkV1ZGbjdLMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjIzLjk1LjU2LjE5NSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+- name: 👑 queen 78
+  type: vless
+  server: 104.19.198.87
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: 824e56d9-20c9-40a1-9fea-bf9ed05d1dbf
+  packet-encoding: ''
+  tls: true
+  servername: ARsENVPN68-5.PAnEL1-cC4.wOrkErS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoid21kY0ltUjUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMy45NS41Ni4xOTUiXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: arsenvpn68-5.panel1-cc4.workers.dev
+proxy-groups:
+- name: ✅ Selector
+  type: select
+  proxies:
+  - 💎 Best Ping 🚀
+  - 👑 queen 01
+  - 👑 queen 02
+  - 👑 queen 03
+  - 👑 queen 04
+  - 👑 queen 05
+  - 👑 queen 06
+  - 👑 queen 07
+  - 👑 queen 08
+  - 👑 queen 09
+  - 👑 queen 10
+  - 👑 queen 11
+  - 👑 queen 12
+  - 👑 queen 13
+  - 👑 queen 14
+  - 👑 queen 15
+  - 👑 queen 16
+  - 👑 queen 17
+  - 👑 queen 18
+  - 👑 queen 19
+  - 👑 queen 20
+  - 👑 queen 21
+  - 👑 queen 22
+  - 👑 queen 23
+  - 👑 queen 24
+  - 👑 queen 25
+  - 👑 queen 26
+  - 👑 queen 27
+  - 👑 queen 28
+  - 👑 queen 29
+  - 👑 queen 30
+  - 👑 queen 31
+  - 👑 queen 32
+  - 👑 queen 33
+  - 👑 queen 34
+  - 👑 queen 35
+  - 👑 queen 36
+  - 👑 queen 37
+  - 👑 queen 38
+  - 👑 queen 39
+  - 👑 queen 40
+  - 👑 queen 41
+  - 👑 queen 42
+  - 👑 queen 43
+  - 👑 queen 44
+  - 👑 queen 45
+  - 👑 queen 46
+  - 👑 queen 47
+  - 👑 queen 48
+  - 👑 queen 49
+  - 👑 queen 50
+  - 👑 queen 51
+  - 👑 queen 52
+  - 👑 queen 53
+  - 👑 queen 54
+  - 👑 queen 55
+  - 👑 queen 56
+  - 👑 queen 57
+  - 👑 queen 58
+  - 👑 queen 59
+  - 👑 queen 60
+  - 👑 queen 61
+  - 👑 queen 62
+  - 👑 queen 63
+  - 👑 queen 64
+  - 👑 queen 65
+  - 👑 queen 66
+  - 👑 queen 67
+  - 👑 queen 68
+  - 👑 queen 69
+  - 👑 queen 70
+  - 👑 queen 71
+  - 👑 queen 72
+  - 👑 queen 73
+  - 👑 queen 74
+  - 👑 queen 75
+  - 👑 queen 76
+  - 👑 queen 77
+  - 👑 queen 78
+- name: 💎 Best Ping 🚀
+  type: url-test
+  proxies:
+  - 👑 queen 01
+  - 👑 queen 02
+  - 👑 queen 03
+  - 👑 queen 04
+  - 👑 queen 05
+  - 👑 queen 06
+  - 👑 queen 07
+  - 👑 queen 08
+  - 👑 queen 09
+  - 👑 queen 10
+  - 👑 queen 11
+  - 👑 queen 12
+  - 👑 queen 13
+  - 👑 queen 14
+  - 👑 queen 15
+  - 👑 queen 16
+  - 👑 queen 17
+  - 👑 queen 18
+  - 👑 queen 19
+  - 👑 queen 20
+  - 👑 queen 21
+  - 👑 queen 22
+  - 👑 queen 23
+  - 👑 queen 24
+  - 👑 queen 25
+  - 👑 queen 26
+  - 👑 queen 27
+  - 👑 queen 28
+  - 👑 queen 29
+  - 👑 queen 30
+  - 👑 queen 31
+  - 👑 queen 32
+  - 👑 queen 33
+  - 👑 queen 34
+  - 👑 queen 35
+  - 👑 queen 36
+  - 👑 queen 37
+  - 👑 queen 38
+  - 👑 queen 39
+  - 👑 queen 40
+  - 👑 queen 41
+  - 👑 queen 42
+  - 👑 queen 43
+  - 👑 queen 44
+  - 👑 queen 45
+  - 👑 queen 46
+  - 👑 queen 47
+  - 👑 queen 48
+  - 👑 queen 49
+  - 👑 queen 50
+  - 👑 queen 51
+  - 👑 queen 52
+  - 👑 queen 53
+  - 👑 queen 54
+  - 👑 queen 55
+  - 👑 queen 56
+  - 👑 queen 57
+  - 👑 queen 58
+  - 👑 queen 59
+  - 👑 queen 60
+  - 👑 queen 61
+  - 👑 queen 62
+  - 👑 queen 63
+  - 👑 queen 64
+  - 👑 queen 65
+  - 👑 queen 66
+  - 👑 queen 67
+  - 👑 queen 68
+  - 👑 queen 69
+  - 👑 queen 70
+  - 👑 queen 71
+  - 👑 queen 72
+  - 👑 queen 73
+  - 👑 queen 74
+  - 👑 queen 75
+  - 👑 queen 76
+  - 👑 queen 77
+  - 👑 queen 78
+  url: https://www.gstatic.com/generate_204
+  interval: 30
+  tolerance: 50
+rules:
+- GEOIP,lan,DIRECT,no-resolve
+- NETWORK,udp,REJECT
+- MATCH,✅ Selector
+ntp:
+  enable: true
+  server: time.cloudflare.com
+  port: 123
+  interval: 30
