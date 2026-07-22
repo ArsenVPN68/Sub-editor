@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       sub_type:
-        description: 'نوع ساب را انتخاب کنید'
+        description: 'نوع ساب (پشتیبانی از ترکیب چند لینک)'
         required: true
         default: 'Raw / Base64'
         type: choice
@@ -13,7 +13,7 @@ on:
         - 'Clash (YAML)'
         - 'JSON (Sing-box)'
       sub_url:
-        description: 'لینک ساب‌اسکریپشن ورودی'
+        description: 'لینک یا لینک‌های ساب‌اسکریپشن (چند لینک را در خطوط جداگانه وارد کنید)'
         required: true
         type: string
       custom_name:
@@ -52,5 +52,5 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git pull origin main --rebase
         git add .
-        git commit -m "Add new subscription file and QR code [skip ci]" || exit 0
+        git commit -m "Update subscription files [skip ci]" || exit 0
         git push
