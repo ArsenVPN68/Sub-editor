@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubX - پنل مدیریت ساب‌اسکریپشن</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #07090e;
+            --card-bg: rgba(18, 26, 43, 0.65);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --primary: #38bdf8;
+            --primary-glow: rgba(56, 189, 248, 0.35);
+            --accent: #a855f7;
+            --danger: #f43f5e;
+        }
+
+        * { box-sizing: border-box; font-family: 'Vazirmatn', system-ui, sans-serif; transition: all 0.25s ease; }
+
+        body {
+            background: var(--bg);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.12) 0px, transparent 50%);
+            color: var(--text-main); margin: 0; padding: 24px; min-height: 100vh;
+        }
+
+        .container { max-width: 1080px; margin: 0 auto; }
+
+        header {
+            background: var(--card-bg); backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border); border-radius: 24px;
+            padding: 24px; margin-bottom: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        h1 { margin: 0; font-size: 1.6rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .token-box { display: flex; align-items: center; gap: 12px; margin-top: 20px; background: rgba(0, 0, 0, 0.4); padding: 10px 16px; border-radius: 14px; border: 1px solid var(--card-border); }
+        .token-box input { background: transparent; border: none; color: var(--primary); width: 100%; outline: none; direction: ltr; font-family: monospace; }
+
+        .create-box { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 24px; margin-bottom: 28px; backdrop-filter: blur(20px); }
+        .form-row { display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+        .form-group { flex: 1; min-width: 220px; }
+        .form-group label { display: block; font-size: 0.85rem; color: var(--text-sub); margin-bottom: 8px; font-weight: 600; }
+        .form-control { width: 100%; background: rgba(0, 0, 0, 0.4); border: 1px solid var(--card-border); border-radius: 12px; padding: 12px 14px; color: #fff; outline: none; }
+        .form-control:focus { border-color: var(--primary); box-shadow: 0 0 15px var(--primary-glow); }
+        textarea.form-control { resize: vertical; min-height: 90px; direction: ltr; font-family: monospace; }
+
+        .checkbox-group { display: flex; align-items: center; gap: 10px; margin-top: 28px; cursor: pointer; }
+        .checkbox-group input { width: 20px; height: 20px; accent-color: var(--primary); cursor: pointer; }
+
+        .controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+        .tabs { display: flex; gap: 6px; background: rgba(0, 0, 0, 0.4); padding: 6px; border-radius: 14px; border: 1px solid var(--card-border); }
+        .tab-btn { background: transparent; border: none; color: var(--text-sub); padding: 8px 18px; border-radius: 10px; cursor: pointer; font-weight: 700; }
+        .tab-btn.active { background: linear-gradient(135deg, var(--primary), #0284c7); color: #000; }
+
+        .btn { background: linear-gradient(135deg, var(--primary), #0284c7); color: #0b0f19; border: none; padding: 12px 24px; border-radius: 14px; cursor: pointer; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+        .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn-danger { background: linear-gradient(135deg, var(--danger), #be123c); color: white; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 24px; }
+        .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 20px; position: relative; display: flex; flex-direction: column; align-items: center; }
+        .card img { width: 140px; height: 140px; border-radius: 16px; background: #fff; padding: 8px; margin: 16px 0; cursor: pointer; }
+
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); justify-content: center; align-items: center; z-index: 1000; }
+        .modal-content { background: var(--card-bg); border: 1px solid var(--card-border); padding: 28px; border-radius: 24px; text-align: center; }
+        .modal img { width: 220px; height: 220px; border-radius: 16px; background: #fff; padding: 10px; margin-bottom: 20px; }
+
+        #toast-container { position: fixed; bottom: 24px; left: 24px; z-index: 2000; display: flex; flex-direction: column; gap: 10px; }
+        .toast { background: rgba(18, 26, 43, 0.95); border: 1px solid var(--card-border); color: #fff; padding: 14px 20px; border-radius: 14px; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <span style="font-size:2rem;">⚡</span>
+                    <h1>SubX Pro - پنل مدیریت هوشمند ساب</h1>
+                </div>
+                <button id="delete-btn" class="btn btn-danger" onclick="deleteSelected()" style="display:none;">
+                    🗑️ حذف انتخاب‌شده‌ها (<span id="select-count">0</span>)
+                </button>
+            </div>
+            
+            <div class="token-box">
+                <span style="font-size: 0.85rem; color: var(--text-sub);">🔑 GitHub Token:</span>
+                <input type="password" id="gh-token" placeholder="توکن ghp_ خود را وارد کنید..." onchange="saveToken()">
+            </div>
+        </header>
+
+        <div class="create-box">
+            <h3 style="margin-top:0; color:var(--primary);">🚀 ساخت ساب جدید با پردازش پیشرفته</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>نوع ساب (Format):</label>
+                    <select id="sub-type" class="form-control">
+                        <option value="Raw">RAW (V2Ray / Base64)</option>
+                        <option value="Clash">Clash Meta (YAML)</option>
+                        <option value="JSON">Sing-Box / BPB (JSON)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>نام اختصاصی سرورها:</label>
+                    <input type="text" id="custom-name" class="form-control" value="ArsenVPN">
+                </div>
+            </div>
+
+            <!-- بخش جدید تنظیمات کلودفلر و پینگ -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label>🌐 آی‌پی تمیز کلودفلر (اختیاری):</label>
+                    <input type="text" id="clean-ip" class="form-control" placeholder="مثلا: 104.16.1.1 یا clean.domain.com">
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-group">
+                        <input type="checkbox" id="enable-ping">
+                        <span>🔍 فیلتر خودکار کانفیگ‌های قطعی (تست پینگ زنده)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom:16px;">
+                <label>لینک‌های ساب یا کانفیگ‌ها (هرکدام در یک خط):</label>
+                <textarea id="sub-urls" class="form-control" placeholder="https://...\nvless://...\nvmess://..."></textarea>
+            </div>
+            <button class="btn" id="create-btn" style="width:100%; justify-content:center;" onclick="createSub()">⚡ ساخت و پردازش هوشمند ساب‌اسکریپشن</button>
+        </div>
+
+        <div class="controls">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="filterType('all', this)">همه</button>
+                <button class="tab-btn" onclick="filterType('sub-raw', this)">RAW</button>
+                <button class="tab-btn" onclick="filterType('sub-clash', this)">Clash</button>
+                <button class="tab-btn" onclick="filterType('sub-json', this)">JSON</button>
+            </div>
+            <input type="text" id="search-input" class="form-control" style="max-width:250px;" placeholder="🔍 جستجو بر اساس نام..." oninput="renderGrid()">
+            <button class="btn" style="background: rgba(255,255,255,0.08); color:#fff;" onclick="loadFiles()">🔄 بروزرسانی</button>
+        </div>
+
+        <div id="file-grid" class="grid">
+            <p style="grid-column: 1/-1; text-align: center; color: var(--text-sub);">در حال بارگذاری...</p>
+        </div>
+    </div>
+
+    <div id="qr-modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h3 id="modal-title" style="margin-top:0;">QR Code</h3>
+            <img id="modal-img" src="" alt="QR">
+            <div style="display:flex; gap:10px;">
+                <a id="download-qr-btn" class="btn" style="flex:1; justify-content:center; text-decoration:none;" download>📥 دانلود QR</a>
+                <button class="btn btn-danger" onclick="closeModal()">بستن</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script>
+        const pathParts = window.location.pathname.split('/').filter(p => p);
+        const username = window.location.hostname.includes('github.io') ? window.location.hostname.split('.')[0] : (pathParts[0] || '');
+        const repoPath = pathParts[pathParts.length - 1] || '';
+        const repoInfo = `${username}/${repoPath}`;
+        const rawBase = `https://raw.githubusercontent.com/${username}/${repoPath}/main`;
+
+        let allFiles = [], selectedFiles = new Map(), currentFilter = 'all';
+
+        document.getElementById('gh-token').value = localStorage.getItem('gh_pat') || '';
+
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerText = msg;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+        }
+
+        function saveToken() {
+            localStorage.setItem('gh_pat', document.getElementById('gh-token').value.trim());
+            showToast('🔑 توکن ذخیره شد.');
+        }
+
+        async function createSub() {
+            const token = document.getElementById('gh-token').value.trim();
+            const subType = document.getElementById('sub-type').value;
+            const customName = document.getElementById('custom-name').value.trim() || 'ArsenVPN';
+            const subUrls = document.getElementById('sub-urls').value.trim();
+            const cleanIp = document.getElementById('clean-ip').value.trim();
+            const enablePing = document.getElementById('enable-ping').checked.toString();
+
+            if (!token) return showToast('⚠️ لطفاً GitHub Token را وارد کنید.');
+            if (!subUrls) return showToast('⚠️ لطفاً حداقل یک ورودی وارد کنید.');
+
+            const btn = document.getElementById('create-btn');
+            btn.innerText = "⏳ در حال پردازش در GitHub Actions...";
+            btn.disabled = true;
+
+            try {
+                const res = await fetch(`https://api.github.com/repos/${username}/${repoPath}/actions/workflows/main.yml/dispatches`, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        ref: 'main',
+                        inputs: { sub_type: subType, urls: subUrls, custom_name: customName, repo_info: repoInfo, clean_ip: cleanIp, enable_ping: enablePing }
+                    })
+                });
+
+                if (res.status === 204) {
+                    showToast('✨ درخواست پردازش ارسال شد! ۲۰ ثانیه دیگر بروزرسانی کنید.');
+                    document.getElementById('sub-urls').value = '';
+                } else showToast('❌ خطا در درخواست');
+            } catch (e) { showToast('❌ خطا: ' + e.message); }
+            finally {
+                btn.innerText = "⚡ ساخت و پردازش هوشمند ساب‌اسکریپشن";
+                btn.disabled = false;
+            }
+        }
+
+        async function loadFiles() {
+            const grid = document.getElementById('file-grid');
+            grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">در حال دریافت فایل‌ها...</p>';
+            allFiles = [];
+
+            for (const folder of ['sub-raw', 'sub-clash', 'sub-json']) {
+                try {
+                    const res = await fetch(`https://api.github.com/repos/${username}/${repoPath}/contents/${folder}`);
+                    if (res.ok) {
+                        const files = await res.json();
+                        files.forEach(file => {
+                            if (!file.name.endsWith('.png') && !file.name.startsWith('.')) {
+                                allFiles.push({
+                                    name: file.name, path: file.path, sha: file.sha, folder: folder,
+                                    downloadUrl: file.download_url,
+                                    qrUrl: `${rawBase}/${folder}/${file.name.split('.')[0]}_qr.png`
+                                });
+                            }
+                        });
+                    }
+                } catch (e) {}
+            }
+            renderGrid();
+        }
+
+        function renderGrid() {
+            const grid = document.getElementById('file-grid');
+            const searchVal = document.getElementById('search-input').value.toLowerCase();
+            grid.innerHTML = '';
+
+            let filtered = currentFilter === 'all' ? allFiles : allFiles.filter(f => f.folder === currentFilter);
+            if (searchVal) filtered = filtered.filter(f => f.name.toLowerCase().includes(searchVal));
+
+            if (filtered.length === 0) return grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">هیچ سابی یافت نشد.</p>';
+
+            filtered.forEach(file => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <input type="checkbox" style="position:absolute; top:18px; right:18px;" onchange="toggleSelect('${file.path}', '${file.sha}', this.checked)">
+                    <span style="font-size:0.75rem; color:var(--accent);">${file.folder.replace('sub-', '').toUpperCase()}</span>
+                    <img src="${file.qrUrl}" onclick="openModal('${file.qrUrl}', '${file.name}')" onerror="this.src='https://via.placeholder.com/150/121a2b/38bdf8?text=No+QR'">
+                    <div style="font-family:monospace; margin-bottom:12px;">${file.name}</div>
+                    <button class="btn" style="width:100%; justify-content:center;" onclick="copyToClipboard('${file.downloadUrl}')">📋 کپی لینک ساب</button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterType(type, btn) {
+            currentFilter = type;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderGrid();
+        }
+
+        function toggleSelect(path, sha, isChecked) {
+            if (isChecked) selectedFiles.set(path, sha);
+            else selectedFiles.delete(path);
+            document.getElementById('select-count').innerText = selectedFiles.size;
+            document.getElementById('delete-btn').style.display = selectedFiles.size > 0 ? 'flex' : 'none';
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            showToast('✨ لینک ساب کپی شد!');
+        }
+
+        function openModal(url, name) {
+            document.getElementById('modal-img').src = url;
+            document.getElementById('modal-title').innerText = name;
+            document.getElementById('download-qr-btn').href = url;
+            document.getElementById('qr-modal').style.display = 'flex';
+        }
+
+        function closeModal() { document.getElementById('qr-modal').style.display = 'none'; }
+
+        loadFiles();
+    </script>
+</body>
+</html>
