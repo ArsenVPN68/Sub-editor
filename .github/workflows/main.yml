@@ -19,6 +19,11 @@ on:
         description: 'Custom Config Name'
         required: false
         default: 'ArsenVPN'
+      enable_flags:
+        description: 'Add Country Flags to Config Names'
+        required: false
+        type: boolean
+        default: true
 
 jobs:
   build:
@@ -39,7 +44,7 @@ jobs:
 
       - name: Run script
         run: |
-          python process.py "${{ inputs.sub_type }}" "${{ inputs.sub_url }}" "${{ inputs.custom_name }}" "${{ github.repository }}"
+          python process.py "${{ inputs.sub_type }}" "${{ inputs.sub_url }}" "${{ inputs.custom_name }}" "${{ github.repository }}" "${{ inputs.enable_flags }}"
 
       - name: Commit and push changes
         run: |
