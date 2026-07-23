@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت و ادغام ساب‌لینک‌ها</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        h2, h3 { color: #4caf50; margin-top: 0; }
+        label { display: block; margin-top: 10px; font-size: 14px; }
+        textarea, input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            background-color: #2a2a2a;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 6px;
+            background-color: #4caf50;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover { background-color: #45a049; }
+        .sub-item {
+            background-color: #2a2a2a;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sub-info { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%; }
+        .sub-title { font-weight: bold; color: #64b5f6; }
+        .sub-actions button {
+            width: auto;
+            padding: 5px 10px;
+            margin-top: 0;
+            margin-left: 5px;
+            font-size: 12px;
+        }
+        .btn-del { background-color: #e53935; }
+        .btn-del:hover { background-color: #d32f2f; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>ساخت و ادغام ساب‌لینک جدید</h2>
+    
+    <label>لینک‌ها یا کانفیگ‌ها (هر کدام در یک خط):</label>
+    <textarea id="inputData" rows="5" placeholder="لینک ساب ۱&#10;لینک ساب ۲&#10;vless://..."></textarea>
+    
+    <label>نام دلخواه کانفیگ‌ها:</label>
+    <input type="text" id="customName" value="ArsenVPN">
+    
+    <button onclick="generateSub()">ایجاد و ذخیره ساب‌لینک</button>
+</div>
+
+<div class="card">
+    <h3>ساب‌لینک‌های ذخیره‌شده شما</h3>
+    <div id="subList">کمی صبور باشید...</div>
+</div>
+
+<script>
+    // خواندن ساب‌های ذخیره شده
+    function loadSavedSubs() {
+        const subs = JSON.parse(localStorage.getItem("my_saved_subs") || "[]");
+        const listDiv = document.getElementById("subList");
+        
+        if (subs.length === 0) {
+            listDiv.innerHTML = "<p style='color:#888;'>هیچ ساب‌لینکی ذخیره نشده است.</p>";
+            return;
+        }
+
+        listDiv.innerHTML = "";
+        subs.forEach((item, index) => {
+            const subHtml = `
+                <div class="sub-item">
+                    <div class="sub-info">
+                        <div class="sub-title">${item.name}</div>
+                        <small style="color:#aaa;">${item.date}</small>
+                    </div>
+                    <div class="sub-actions">
+                        <button onclick="copyLink('${item.link}')">📋 کپی</button>
+                        <button class="btn-del" onclick="deleteSub(${index})">🗑️ حذف</button>
+                    </div>
+                </div>
+            `;
+            listDiv.innerHTML += subHtml;
+        });
+    }
+
+    function generateSub() {
+        const inputData = document.getElementById("inputData").value.trim();
+        const customName = document.getElementById("customName").value.trim() || "ArsenVPN";
+        
+        if (!inputData) {
+            alert("لطفا حداقل یک لینک یا کانفیگ وارد کنید!");
+            return;
+        }
+
+        // انکود داده‌ها به Base64
+        const b64Data = btoa(unescape(encodeURIComponent(inputData)));
+        
+        // ساخت لینک فراخوانی گیتهاب یا وورکر
+        // (این بخش لینک خروجی ساب‌لینک پردازش شده رو می‌سازه)
+        const currentUrl = window.location.href.split('?')[0].replace('index.html', '');
+        const generatedLink = `${currentUrl}sub.txt?data=${b64Data}&name=${encodeURIComponent(customName)}`;
+
+        // ذخیره در LocalStorage
+        const subs = JSON.parse(localStorage.getItem("my_saved_subs") || "[]");
+        subs.unshift({
+            name: customName + " (" + inputData.split('\n').length + " منبع)",
+            link: generatedLink,
+            date: new Date().toLocaleDateString('fa-IR')
+        });
+        localStorage.setItem("my_saved_subs", JSON.stringify(subs));
+
+        // پاکسازی فرم و بروزرسانی لیست
+        document.getElementById("inputData").value = "";
+        loadSavedSubs();
+        alert("ساب‌لینک جدید ساخته شد و در لیست زیر قرار گرفت!");
+    }
+
+    function deleteSub(index) {
+        if (confirm("آیا از حذف این ساب‌لینک مطمئن هستید؟")) {
+            const subs = JSON.parse(localStorage.getItem("my_saved_subs") || "[]");
+            subs.splice(index, 1);
+            localStorage.setItem("my_saved_subs", JSON.stringify(subs));
+            loadSavedSubs();
+        }
+    }
+
+    function copyLink(link) {
+        navigator.clipboard.writeText(link);
+        alert("لینک ساب‌اسکریپشن کپی شد!");
+    }
+
+    // بارگذاری اولیه
+    loadSavedSubs();
+</script>
+
+</body>
+</html>
