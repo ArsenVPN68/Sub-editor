@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت ساب‌اسکریپشن</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --card-bg: rgba(23, 32, 51, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f1f5f9;
+            --text-sub: #94a3b8;
+            --primary: #38bdf8;
+            --primary-hover: #0284c7;
+            --danger: #f43f5e;
+            --danger-hover: #e11d48;
+            --accent: #8b5cf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', system-ui, sans-serif;
+            transition: all 0.25s ease;
+        }
+
+        body {
+            background: radial-gradient(circle at top left, #1e1b4b, var(--bg) 50%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 24px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header & Settings */
+        header {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 20px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .token-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 16px;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 8px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+        }
+
+        .token-box input {
+            background: transparent;
+            border: none;
+            color: var(--primary);
+            width: 100%;
+            outline: none;
+            font-size: 0.85rem;
+            direction: ltr;
+        }
+
+        /* Controls & Filters */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 4px;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-sub);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: #0b0f19;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+        }
+
+        .btn:hover { background: var(--primary-hover); color: #fff; transform: translateY(-2px); }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+            box-shadow: 0 4px 14px rgba(244, 63, 94, 0.3);
+        }
+
+        .btn-danger:hover { background: var(--danger-hover); }
+
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .card-checkbox {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 22px;
+            height: 22px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        .badge {
+            align-self: flex-start;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 14px;
+            margin: 16px 0;
+            background: #fff;
+            padding: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .card-title {
+            font-weight: 700;
+            margin-bottom: 14px;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            direction: ltr;
+        }
+
+        .card-actions {
+            width: 100%;
+        }
+
+        .card-actions button {
+            width: 100%;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>⚡ پنل مدیریت ساب‌اسکریپشن</h1>
+                <div class="action-btns">
+                    <button id="delete-btn" class="btn btn-danger" onclick="deleteSelected()" style="display:none;">
+                        🗑️ حذف انتخاب‌شده‌ها (<span id="select-count">0</span>)
+                    </button>
+                </div>
+            </div>
+            
+            <div class="token-box">
+                <span style="font-size: 0.8rem; color: var(--text-sub);">🔑 Personal Token:</span>
+                <input type="password" id="gh-token" placeholder="توکن ghp_ خود را اینجا وارد کنید..." onchange="saveToken()">
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="filterType('all', this)">همه</button>
+                <button class="tab-btn" onclick="filterType('sub-raw', this)">RAW</button>
+                <button class="tab-btn" onclick="filterType('sub-clash', this)">Clash</button>
+                <button class="tab-btn" onclick="filterType('sub-json', this)">JSON</button>
+            </div>
+        </div>
+
+        <div id="file-grid" class="grid">
+            <p style="grid-column: 1/-1; text-align: center; color: var(--text-sub);">در حال بارگذاری فایل‌ها...</p>
+        </div>
+    </div>
+
+    <script>
+        const username = window.location.hostname.split('.')[0];
+        const repoPath = window.location.pathname.replace(/^\/|\/$/g, '');
+        const rawBase = `https://raw.githubusercontent.com/${username}/${repoPath}/main`;
+
+        let allFiles = [];
+        let selectedFiles = new Map();
+        let currentFilter = 'all';
+
+        // بارگیری توکن ذخیره‌شده از LocalStorage
+        document.getElementById('gh-token').value = localStorage.getItem('gh_pat') || '';
+
+        function saveToken() {
+            const token = document.getElementById('gh-token').value.trim();
+            localStorage.setItem('gh_pat', token);
+        }
+
+        async function loadFiles() {
+            const grid = document.getElementById('file-grid');
+            grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-sub);">در حال بارگذاری ساب‌ها...</p>';
+            
+            const folders = ['sub-raw', 'sub-clash', 'sub-json'];
+            allFiles = [];
+
+            for (const folder of folders) {
+                try {
+                    const res = await fetch(`https://api.github.com/repos/${username}/${repoPath}/contents/${folder}`);
+                    if (res.ok) {
+                        const files = await res.json();
+                        files.forEach(file => {
+                            if (!file.name.endsWith('.png') && !file.name.startsWith('.')) {
+                                allFiles.push({
+                                    name: file.name,
+                                    path: file.path,
+                                    sha: file.sha,
+                                    folder: folder,
+                                    downloadUrl: file.download_url,
+                                    qrUrl: `${rawBase}/${folder}/${file.name.split('.')[0]}_qr.png`
+                                });
+                            }
+                        });
+                    }
+                } catch (e) { console.error(e); }
+            }
+
+            renderGrid();
+        }
+
+        function renderGrid() {
+            const grid = document.getElementById('file-grid');
+            grid.innerHTML = '';
+
+            const filteredFiles = currentFilter === 'all' 
+                ? allFiles 
+                : allFiles.filter(f => f.folder === currentFilter);
+
+            if (filteredFiles.length === 0) {
+                grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-sub);">هیچ ساب‌اسکریپشنی در این بخش یافت نشد.</p>';
+                return;
+            }
+
+            filteredFiles.forEach(file => {
+                const isChecked = selectedFiles.has(file.path);
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <input type="checkbox" class="card-checkbox" ${isChecked ? 'checked' : ''} onchange="toggleSelect('${file.path}', '${file.sha}', this.checked)">
+                    <span class="badge">${file.folder.replace('sub-', '').toUpperCase()}</span>
+                    <img src="${file.qrUrl}" alt="QR Code" onerror="this.style.display='none'">
+                    <div class="card-title">${file.name}</div>
+                    <div class="card-actions">
+                        <button class="btn" onclick="copyToClipboard('${file.downloadUrl}')">📋 کپی لینک ساب</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterType(type, btn) {
+            currentFilter = type;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderGrid();
+        }
+
+        function toggleSelect(path, sha, isChecked) {
+            if (isChecked) selectedFiles.set(path, sha);
+            else selectedFiles.delete(path);
+
+            const btn = document.getElementById('delete-btn');
+            const count = document.getElementById('select-count');
+            count.innerText = selectedFiles.size;
+            btn.style.display = selectedFiles.size > 0 ? 'flex' : 'none';
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert('✨ لینک ساب‌اسکریپشن با موفقیت کپی شد!');
+        }
+
+        async function deleteSelected() {
+            const token = document.getElementById('gh-token').value.trim();
+            if (!token) {
+                alert("⚠️ لطفاً توکن شخصی (Personal Token) خود را در کادر بالای صفحه وارد کنید.");
+                return;
+            }
+
+            if (!confirm(`آیا مطمئن هستید که می‌خواهید ${selectedFiles.size} ساب انتخاب‌شده را کاملاً حذف کنید؟`)) return;
+
+            const btn = document.getElementById('delete-btn');
+            btn.innerText = "⏳ در حال حذف...";
+            btn.disabled = true;
+
+            for (const [path, sha] of selectedFiles.entries()) {
+                try {
+                    await fetch(`https://api.github.com/repos/${username}/${repoPath}/contents/${path}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            message: `Delete ${path} via Panel`,
+                            sha: sha
+                        })
+                    });
+
+                    // حذف تصویر QR Code معادل
+                    const qrPath = path.replace(/\.[^/.]+$/, "") + "_qr.png";
+                    const qrRes = await fetch(`https://api.github.com/repos/${username}/${repoPath}/contents/${qrPath}`);
+                    if (qrRes.ok) {
+                        const qrData = await qrRes.json();
+                        await fetch(`https://api.github.com/repos/${username}/${repoPath}/contents/${qrPath}`, {
+                            method: 'DELETE',
+                            headers: {
+                                'Authorization': `token ${token}`,
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                message: `Delete ${qrPath} via Panel`,
+                                sha: qrData.sha
+                            })
+                        });
+                    }
+                } catch (e) { console.error(e); }
+            }
+
+            alert("✅ ساب‌های انتخاب شده با موفقیت حذف شدند!");
+            selectedFiles.clear();
+            btn.style.display = 'none';
+            btn.disabled = false;
+            loadFiles();
+        }
+
+        loadFiles();
+    </script>
+</body>
+</html>
