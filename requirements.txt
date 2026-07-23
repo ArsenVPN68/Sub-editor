@@ -2,3 +2,4 @@ requests
 pyyaml
 qrcode
 pillow
+python-telegram-bot
