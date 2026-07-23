@@ -1,118 +1,86 @@
-import sys
-import os
-import re
 import base64
-import requests
 import json
-import qrcode
-from urllib.parse import unquote, quote
+import urllib.request
+import os
 
-# گرفتن ورودی‌ها از اکشن
-sub_type = sys.argv[1] if len(sys.argv) > 1 else 'Raw / Base64'
-sub_urls = sys.argv[2] if len(sys.argv) > 2 else ''
-custom_name = sys.argv[3] if len(sys.argv) > 3 else 'ArsenVPN'
-repo_full = sys.argv[4] if len(sys.argv) > 4 else ''
-# ورودی جدید برای چک کردن پرچم‌گذاری
-enable_flags_str = sys.argv[5] if len(sys.argv) > 5 else 'true'
-ENABLE_FLAGS = enable_flags_str.lower() in ['true', '1', 'yes']
-
-def country_code_to_emoji(cc):
-    if not cc or len(cc) != 2:
-        return '🌐'
-    return chr(ord(cc[0].upper()) + 127397) + chr(ord(cc[1].upper()) + 127397)
-
-def get_flag(host):
-    if not ENABLE_FLAGS:
-        return ''
+def decode_base64_safe(data_str):
+    data_str = data_str.strip()
+    missing_padding = len(data_str) % 4
+    if missing_padding:
+        data_str += '=' * (4 - missing_padding)
     try:
-        # حذف پورت در صورت وجود
-        clean_host = host.split(':')[0]
-        res = requests.get(f'http://ip-api.com/json/{clean_host}?fields=countryCode', timeout=3)
-        if res.status_code == 200:
-            data = res.json()
-            cc = data.get('countryCode', '')
-            if cc:
-                return country_code_to_emoji(cc) + ' '
+        return base64.b64decode(data_str).decode('utf-8', errors='ignore')
     except Exception:
-        pass
-    return '🌐 '
+        return data_str
 
-def process_configs():
-    urls = [u.strip() for u in re.split(r'[\r\n\s]+', sub_urls) if u.strip()]
-    all_raw_configs = []
+def fetch_url_content(url):
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'v2rayNG/1.8.5'})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            text = response.read().decode('utf-8', errors='ignore').strip()
+            decoded = decode_base64_safe(text)
+            return decoded
+    except Exception as e:
+        print(f"Error fetching {url}: {e}")
+        return ""
 
-    for url in urls:
-        try:
-            r = requests.get(url, timeout=10)
-            if r.status_code == 200:
-                content = r.text.strip()
-                # اگر بیس۶۴ بود دکود کن
-                try:
-                    decoded = base64.b64decode(content).decode('utf-8')
-                    lines = decoded.splitlines()
-                except Exception:
-                    lines = content.splitlines()
+def main():
+    raw_input_b64 = os.environ.get("INPUT_DATA_B64", "")
+    custom_name = os.environ.get("CUSTOM_NAME", "ArsenVPN")
 
-                for line in lines:
-                    line = line.strip()
-                    if line and any(line.startswith(p) for p in ['vless://', 'vmess://', 'trojan://', 'ss://', 'ssr://']):
-                        all_raw_configs.append(line)
-        except Exception as e:
-            print(f"Error fetching {url}: {e}")
+    if not raw_input_b64:
+        print("No input data provided.")
+        return
+
+    raw_input = decode_base64_safe(raw_input_b64)
+    lines = [line.strip() for line in raw_input.splitlines() if line.strip()]
+
+    raw_configs = []
+
+    for line in lines:
+        if line.startswith("http://") or line.startswith("https://"):
+            sub_content = fetch_url_content(line)
+            sub_lines = sub_content.splitlines()
+            for s_line in sub_lines:
+                s_line = s_line.strip()
+                if any(s_line.startswith(proto) for proto in ["vless://", "vmess://", "trojan://", "ss://", "ssr://", "tuic://", "hy2://"]):
+                    raw_configs.append(s_line)
+        elif any(line.startswith(proto) for proto in ["vless://", "vmess://", "trojan://", "ss://", "ssr://", "tuic://", "hy2://"]):
+            raw_configs.append(line)
+
+    if not raw_configs:
+        print("No configs found.")
+        with open("sub.txt", "w", encoding="utf-8") as f:
+            f.write("")
+        return
 
     processed_configs = []
-    for idx, config in enumerate(all_raw_configs, start=1):
-        # استخراج هاست برای دریافت پرچم
-        host = ""
-        try:
-            if config.startswith('vmess://'):
-                b64_part = config.replace('vmess://', '')
-                vdata = json.loads(base64.b64decode(b64_part).decode('utf-8'))
-                host = vdata.get('add', '')
-            else:
-                host_part = config.split('@')[1] if '@' in config else config
-                host = host_part.split(':')[0].split('/')[0].split('?')[0].split('#')[0]
-        except Exception:
-            host = ""
+    for idx, config in enumerate(raw_configs, start=1):
+        num_str = f"{idx:02d}"
+        new_remark = f"{custom_name} {num_str}".strip()
 
-        flag = get_flag(host) if host else ('🌐 ' if ENABLE_FLAGS else '')
-        new_remark = f"{flag}{custom_name} {idx:02d}".strip()
-
-        # اعمال اسم جدید روی کانفیگ
-        if config.startswith('vmess://'):
+        if config.startswith("vmess://"):
             try:
-                b64_part = config.replace('vmess://', '')
-                vdata = json.loads(base64.b64decode(b64_part).decode('utf-8'))
-                vdata['ps'] = new_remark
+                b64_part = config.replace("vmess://", "")
+                vdata = json.loads(decode_base64_safe(b64_part))
+                vdata["ps"] = new_remark
                 new_b64 = base64.b64encode(json.dumps(vdata).encode('utf-8')).decode('utf-8')
                 processed_configs.append(f"vmess://{new_b64}")
             except Exception:
                 processed_configs.append(config)
-        elif '#' in config:
-            base_part = config.split('#')[0]
-            processed_configs.append(f"{base_part}#{quote(new_remark)}")
+        elif "#" in config:
+            base_part = config.split("#")[0]
+            processed_configs.append(f"{base_part}#{urllib.parse.quote(new_remark)}")
         else:
-            processed_configs.append(f"{config}#{quote(new_remark)}")
+            processed_configs.append(f"{config}#{urllib.parse.quote(new_remark)}")
 
-    # ساخت فولدرها
-    os.makedirs('sub-raw', exist_ok=True)
-    os.makedirs('sub-clash', exist_ok=True)
-    os.makedirs('sub-json', exist_ok=True)
+    final_content = "\n".join(processed_configs)
+    final_b64 = base64.b64encode(final_content.encode('utf-8')).decode('utf-8')
 
-    filename = f"{custom_name.lower().replace(' ', '_')}.txt"
-    raw_path = os.path.join('sub-raw', filename)
+    with open("sub.txt", "w", encoding="utf-8") as f:
+        f.write(final_b64)
 
-    # ذخیره فایل RAW
-    final_raw_content = "\n".join(processed_configs)
-    with open(raw_path, 'w', encoding='utf-8') as f:
-        f.write(final_raw_content)
+    print(f"Successfully generated {len(processed_configs)} configs.")
 
-    # ساخت QR Code
-    qr_path = os.path.join('sub-raw', f"{custom_name.lower().replace(' ', '_')}_qr.png")
-    if repo_full:
-        raw_url = f"https://raw.githubusercontent.com/{repo_full}/main/{raw_path}"
-        img = qrcode.make(raw_url)
-        img.save(qr_path)
-
-if __name__ == '__main__':
-    process_configs()
+if __name__ == "__main__":
+    main()
