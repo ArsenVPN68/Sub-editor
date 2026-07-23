@@ -1,0 +1,2506 @@
+# profile-title: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃
+
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+  - https://1.1.1.1/dns-query
+  - 8.8.8.8
+proxies:
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 01
+  type: vless
+  server: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/gWDd1qRaShTQgQla8xiX
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 02
+  type: vless
+  server: 172.67.175.54
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/cmX61LJ1NL0qkRmVRHV0xvZiR
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 03
+  type: vless
+  server: 104.21.31.60
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/Ah1Hbd1MobaDSbgwBD41
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 04
+  type: vless
+  server: www.speedtest.net
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/dtqqCVpyTbNa3p1Xb
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 05
+  type: vless
+  server: cf.877774.xyz
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/CO215MjV9O85s2jQrXtGQsC
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 06
+  type: vless
+  server: hostgator.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/HccSJ61QLdU7gAXYoDaJGHrY
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 07
+  type: vless
+  server: ilovepdf.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/1YI8LfwwxyJYS5BvYzI5spko
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 08
+  type: vless
+  server: repl.it
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/mCqKvj1iSzU4EVX2HdK0l2ghMywu
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 09
+  type: vless
+  server: digitalocean.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/Bil8cnr3DwX7jYAnkjCr8fQ1tz2sUE2u
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 10
+  type: vless
+  server: www.speedtest.net
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/B9EoQV6anKASFTkRbht
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 11
+  type: vless
+  server: replit.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/9afRlWi1RRtghkOl2
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 12
+  type: vless
+  server: creativecommons.org
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/AVfsV7Z8qserIlAuo7Z50dB4vWiOmQG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 13
+  type: vless
+  server: hasura.io
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/OAEUTpwtvKyTan9GMPaiuvxV
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 14
+  type: vless
+  server: chatpgt.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/320rGGPvR9X2tjhOzy0fsXXJTYz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 15
+  type: vless
+  server: chatgpt.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/dw8fwEz4fYU4rNmh3wV5DoUAh3eWl3X
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 16
+  type: vless
+  server: postman.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/IBovM3H1HsgkkqY6
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 17
+  type: vless
+  server: nuxtjs.org
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/kra41qfBJ8rHEHez
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 18
+  type: vless
+  server: iherb.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/o8FmPAonHJbdGmg1Ne4C0gLApl2rIl9
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 19
+  type: vless
+  server: cypress.io
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/NAx0N6EvFgtioulyIk
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 20
+  type: vless
+  server: openai.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/p1UOQm8maVunjrEGKGuHMA1cq
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 21
+  type: vless
+  server: ip.sb
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/NIzPfLFCQwGVqcSpWUiNQeqNDLhXt1
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 22
+  type: vless
+  server: jsfiddle.net
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/NXnp9IW3pKjqOdxm5OvgmiKPlz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 23
+  type: vless
+  server: swagger.io
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/5Ksqz6TNIbLl59eMTTPAQhnyTk67yC
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 24
+  type: vless
+  server: sky.rethinkdns.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/cwxCiQV3fZNeyP456EoGT
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 25
+  type: vless
+  server: codesandbox.io
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/jKJDJ3ePeK0ka6GYo4VpdE5
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 26
+  type: vless
+  server: coinbase.com
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/8g6J44QRWbF0qQeLDOL
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 27
+  type: vless
+  server: sslip.io
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/ZtaQXRd8O3P67DFm1iRif32
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 28
+  type: vless
+  server: 104.18.171.185
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/LCxSG8n7lSaPOftkY7Ptf1
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 29
+  type: vless
+  server: 104.18.136.230
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/bmHOh7Qudllb0xWOHl5MDGH
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 30
+  type: vless
+  server: 104.21.194.193
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/pUXQ26erE0Su22tkA6w6siRmTT0eQ
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 31
+  type: vless
+  server: 172.64.156.232
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/UhtADPxYeQlQslYhTfuy
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 32
+  type: vless
+  server: 104.16.91.73
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/IbRFWM43I0Qncx9unWwF
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 33
+  type: vless
+  server: 104.21.65.183
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/8vsSGxE8kvkIUfR4t
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 34
+  type: vless
+  server: 104.24.80.96
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/ruXm7vG3gErV8hznvUxGyz52Y
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 35
+  type: vless
+  server: 104.16.66.163
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/fRIzbQPWsgF4SkrTtN2MlFyxYPeEuNa
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 36
+  type: vless
+  server: 104.25.97.238
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/DTYNKdthZ4KM1V1m4vYXOpEAH7J
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 37
+  type: vless
+  server: 104.19.198.87
+  port: 2086
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  network: ws
+  ws-opts:
+    path: /vl/wAzMeLsdPTmMCbbsGCRcmPhszhyID
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 38
+  type: vless
+  server: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1O50xFxh2IjVI0h.paNEL1-CC4.WOrKERs.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/5r1l8DZk7nIozGqWQLYJ2yuFh9guW3fg
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 39
+  type: vless
+  server: 172.67.175.54
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1o50xFxh2ijvI0H.PaNel1-cc4.WoRkErs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/M8zIr8GLj2kTUCWtt8QP72c06ax
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 40
+  type: vless
+  server: 104.21.31.60
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50xFXH2IjVI0H.paNEl1-CC4.WORkErS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/udtyE5Ku4LE4UOLaA8kuZ
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 41
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1o50XFXh2iJvi0h.PANEL1-Cc4.Workers.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/0T6ure54DJ6uzYt1UDWHL7LHlbb
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 42
+  type: vless
+  server: cf.877774.xyz
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1o50xfxh2ijvi0H.paNeL1-CC4.WoRKErs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/DJPdggIIfzZvFjqkFvZ3
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 43
+  type: vless
+  server: hostgator.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1o50XfxH2Ijvi0H.PanEL1-CC4.worKErs.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/zZr7IZ0wI93QM4hpuH7FeE9hP8vju
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 44
+  type: vless
+  server: ilovepdf.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50xFXH2ijVI0h.pANel1-cC4.WorKERs.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/dNH94wmDBzCpn5GEWAxlSBw
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 45
+  type: vless
+  server: repl.it
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50XfXH2iJvi0h.paNel1-Cc4.WOrkERs.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/6k5ia9pxuM751aethiI1
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 46
+  type: vless
+  server: digitalocean.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50XfXH2ijvI0h.pAnEL1-cc4.WORKErS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/LVytmWMEpPTbsec4975Z1eivYRG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 47
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50xFxh2ijVi0H.PAnEl1-Cc4.wORkeRS.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/jMLOlpqAmf0z4fQdUxja37DqePjmLB
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 48
+  type: vless
+  server: replit.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50XFXh2ijVI0H.PanEL1-cc4.workErS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/fWmTCOspr18zE1Jmlgtz9n2BHc9r1BYl
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 49
+  type: vless
+  server: creativecommons.org
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1o50Xfxh2IjVi0h.PANEl1-cC4.woRKerS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/d7dZEnhJkTpySyuo4Eh2u013b
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 50
+  type: vless
+  server: hasura.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1o50xFXH2IJVi0h.PANel1-CC4.WORKErs.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/XfEsSGQq7NiptJzuylLwyDCw83jf
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 51
+  type: vless
+  server: chatpgt.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50xFxh2ijvi0H.pAnEl1-cC4.workerS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/wn0ZqYqM37hi142xnXCBZcd5oYt
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 52
+  type: vless
+  server: chatgpt.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1o50xFxH2ijvi0h.PanEL1-cc4.WoRkers.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/tGsFesAr7eNWg8qldPhkBxHBEcY
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 53
+  type: vless
+  server: postman.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50XFxh2IJvi0H.PANeL1-cc4.Workers.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/uNsPxdoenx2l1n0mxOHYeBJ
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 54
+  type: vless
+  server: nuxtjs.org
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50XFxH2IjVi0h.pAnEL1-cc4.WORKeRs.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/LTjNxpK9F97OjcG0QQFX
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 55
+  type: vless
+  server: iherb.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50xFxH2iJvI0H.pAnEL1-Cc4.wORKeRs.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/IIEUXt0DA1qZS8UmEe2ctWfhHD7RSTk
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 56
+  type: vless
+  server: cypress.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50xFxh2IjvI0h.PAnEL1-CC4.WoRKErS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/YxZgbeZwsYnl9USNnArHv9DEEak
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 57
+  type: vless
+  server: openai.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1o50xFxH2IjVI0H.paNeL1-Cc4.wORKeRS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/TGOYAgYz3zCYZkIr034k
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 58
+  type: vless
+  server: ip.sb
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: ap1O50XFxh2iJVi0h.paNel1-CC4.WORKERs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/cVuVeijddgsIJAydXScZSQlqFOj8TH6
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 59
+  type: vless
+  server: jsfiddle.net
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1O50xFXh2iJvi0h.pANEl1-CC4.WOrkERS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/pkP2NaazGNVfBfZDhtDp1O7ZZuMW
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 60
+  type: vless
+  server: swagger.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: ap1o50XFxh2iJVI0h.paNel1-Cc4.worKERs.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/wQsIsqPrPG3BD3nQoTvHTjA3
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 61
+  type: vless
+  server: sky.rethinkdns.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1O50XFxH2ijVI0H.PANeL1-cc4.wORKeRS.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/snCHMt9vGUUwGxMvfZA5fCx2HwUnl
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 62
+  type: vless
+  server: codesandbox.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50XfXh2IJVi0h.PANEl1-CC4.WorKErs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/5746yolgX9EULLRrxql9p0Mx1zAZAILD
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 63
+  type: vless
+  server: coinbase.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1O50XFXh2IJVI0h.panEl1-Cc4.woRkErS.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/B1jQHHisnckyn7yE17uQUoi
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 64
+  type: vless
+  server: sslip.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50xFXH2IJvI0H.panEl1-cC4.WOrKers.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/fBiWIpHjNiTbQDOwFAan
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 65
+  type: vless
+  server: 104.18.171.185
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1o50xfXH2IjVi0H.PaNEL1-Cc4.woRkERS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/3jGbl6DvcX4tpaBfzH
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 66
+  type: vless
+  server: 104.18.136.230
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50XfXh2ijVi0h.PaNEl1-cC4.workErS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/0J70FvO5IiUvdFTQGPpgKfFSnWd
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 67
+  type: vless
+  server: 104.21.194.193
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1o50xfxh2ijVi0H.PaNEl1-Cc4.WorKERS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/HiTRkqWNLZuJz2z9Ny0gJDVcX
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 68
+  type: vless
+  server: 172.64.156.232
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: AP1o50xfXh2IjVI0H.PaNel1-cC4.WORKErS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/hGZHxgEx5I8gCvR8
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 69
+  type: vless
+  server: 104.16.91.73
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1O50XfXH2ijVI0h.PAneL1-cc4.WoRkeRs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/4mrq5nIEy1LccnXsorm1b9NUmEVMaxit
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 70
+  type: vless
+  server: 104.21.65.183
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50xfXh2IJVi0h.pANel1-CC4.wOrkeRS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/7Ylo3Qj3P86HpveH9y5r3oVupWA5Anhn
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 71
+  type: vless
+  server: 104.24.80.96
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: aP1O50XfxH2iJvI0h.PANEl1-cc4.wOrkErs.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/fKxQdE9cRPDp50cOkcg
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 72
+  type: vless
+  server: 104.16.66.163
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1o50xFXh2ijvI0h.paNEL1-CC4.wORKerS.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/Css8Ol3624VcxYEtOcOb
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 73
+  type: vless
+  server: 104.25.97.238
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50xFxH2ijVi0h.Panel1-cC4.woRkErs.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/Ucnnax3vKzdiMoXaTh
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 74
+  type: vless
+  server: 104.19.198.87
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  uuid: 64a559b0-622e-4ce9-ab3c-dadddf99b2d8
+  packet-encoding: ''
+  encryption: ''
+  tls: true
+  servername: Ap1O50xfXh2iJVI0H.paNEL1-cc4.wORkeRs.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /vl/jPyJucPyQRHpZixea
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 75
+  type: trojan
+  server: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1O50xFXh2IjvI0H.pAnEL1-Cc4.WORKERs.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/GPGZP5htHSHauDAmvm5U8g6Z
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 76
+  type: trojan
+  server: 172.67.175.54
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1o50xFxH2Ijvi0h.pANeL1-Cc4.workErs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/yoYpHqwnvZVask7sQB2g2Fu
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 77
+  type: trojan
+  server: 104.21.31.60
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XfXh2iJvI0h.pANEL1-Cc4.woRKerS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/IOCKDmJJDmrFhB0rDUPc2cDjt3QU3K
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 78
+  type: trojan
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: aP1o50xfxH2IJvi0h.PANel1-cc4.WORKeRs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/gi7rkZ0VCyiBAXpNdK28Z99qiWPN
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 79
+  type: trojan
+  server: cf.877774.xyz
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1o50xfXH2IJvi0h.pANeL1-cC4.wORKeRS.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/ydnJQOUg5RbNfaIILCetG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 80
+  type: trojan
+  server: hostgator.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1O50xFxh2ijVI0h.PanEL1-CC4.WoRKeRS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/KH1U78gUt0vYMVMmxaDw
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 81
+  type: trojan
+  server: ilovepdf.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1o50xFxh2ijVI0H.PAnEL1-Cc4.wORKERS.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/vDP6r7g2YBN2aSt7AwgmOB3QlnekGPK
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 82
+  type: trojan
+  server: repl.it
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XfXh2IJVi0H.PaNeL1-cc4.wOrkERs.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/wZ9juHoNCLuimFTUctwIIEY37i4
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 83
+  type: trojan
+  server: digitalocean.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1o50xFxH2IjVi0h.PaneL1-CC4.woRkErS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/0rTnaET59O5bgjdpWWrKhbLe5YG
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 84
+  type: trojan
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50xfxH2IjVi0H.PANeL1-cc4.WOrkeRs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/hi4Exl39SMsNClZwcEwrKCSr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 85
+  type: trojan
+  server: replit.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: aP1O50XfXH2IJvi0H.PaNEL1-CC4.WORKErS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/jdPySk5xBMxOqFTp9cjSo2gnZzg
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 86
+  type: trojan
+  server: creativecommons.org
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XfXh2IJVi0h.panEL1-cc4.wOrKers.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/2FM371kaCxtRt6wyjthp8rS0vE
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 87
+  type: trojan
+  server: hasura.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1o50xfXh2iJvi0h.paNEL1-cc4.wORkeRS.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/bGy6S8is0M4tlMItb4ztAwZa
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 88
+  type: trojan
+  server: chatpgt.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1O50XFXh2ijvi0h.PaNEL1-cC4.woRkerS.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/SdcG5BEUEOOOUbpOrWIJxbOyr3q0w
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 89
+  type: trojan
+  server: chatgpt.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50xFXH2IjvI0h.paNeL1-cC4.workerS.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/SLrXY2QSO1IGleMrYJw9PYe9afg
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 90
+  type: trojan
+  server: postman.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: aP1O50XFxH2ijVi0h.panEl1-CC4.WORKeRS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/yOyLAYfbdGPG2sqoKPtMG5E1sdl0
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 91
+  type: trojan
+  server: nuxtjs.org
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50xfXh2iJvI0H.pAnEL1-CC4.wORkerS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/0wBT5cwr16GK3e3OogdLedLgPNLmX1h4
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 92
+  type: trojan
+  server: iherb.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XFXh2ijVI0H.PanEl1-cC4.worKErs.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/g8jZIYomhGUD8qDusxjNtGCD8S
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 93
+  type: trojan
+  server: cypress.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1O50xfxh2iJVi0H.panel1-Cc4.WOrkErs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/lVdrhMBppDSS1ojVd3A0I6DU2p
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 94
+  type: trojan
+  server: openai.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1O50xFxh2IjVI0h.panel1-cC4.woRkerS.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/j35Hod5jxRiEQyoh6BMAw5Kj
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 95
+  type: trojan
+  server: ip.sb
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1O50XfxH2ijvI0H.PaNEl1-cC4.WorKeRS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/JnIEgdzqaB0oyYzT3rHBJoxaD9z
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 96
+  type: trojan
+  server: jsfiddle.net
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1o50XfXh2IjvI0H.pAnEl1-cc4.woRKers.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/CoqP1r749hB8Ojj7syRFXZH
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 97
+  type: trojan
+  server: swagger.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XfXh2ijvi0H.pANEl1-Cc4.WOrkeRS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/ARABUPXrPedNOawhvS
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 98
+  type: trojan
+  server: sky.rethinkdns.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1O50XfXH2iJVI0H.pAnEl1-CC4.wOrKerS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/d0SEjc8mEyEIcVBrxwM7STKvGF0TqU9
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 99
+  type: trojan
+  server: codesandbox.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: aP1o50xFXH2iJvI0h.pANEl1-cC4.WORKeRs.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/S07OwVTltD3QB6N2Eizp9g
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 100
+  type: trojan
+  server: coinbase.com
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XfXh2IJVi0h.Panel1-cc4.workErs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/r7Kb7SSENw85pFcwUHlO4Bbiv1
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 101
+  type: trojan
+  server: sslip.io
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1O50xFxH2ijVI0h.PAneL1-cC4.wORkERS.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/bKcWC8sY2GMbfHQGykoqi9e1uR
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 102
+  type: trojan
+  server: 104.18.171.185
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XfXH2IJVI0H.PAnel1-cC4.woRKeRs.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/ldY3VgeQGtwFb2pv7L0sTZamsM
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 103
+  type: trojan
+  server: 104.18.136.230
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1o50Xfxh2iJVi0H.PANEL1-cC4.wORkeRS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/uYzpoWnYKqQ2nI105Qk
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 104
+  type: trojan
+  server: 104.21.194.193
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: aP1o50XfxH2ijvI0H.PANEl1-cC4.woRkErs.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/8cLBtUt1w4QCVvtEIL8UBynu3CQ
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 105
+  type: trojan
+  server: 172.64.156.232
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1o50XFxH2Ijvi0h.paNeL1-cC4.WorkeRS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/Ws69O5WnOeiMI1AK1CZl
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 106
+  type: trojan
+  server: 104.16.91.73
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1O50XFXh2ijVI0H.pANEL1-cc4.WorkErs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/5wl0UXvqvqzCHd19lGgrFTd54ziSpDr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 107
+  type: trojan
+  server: 104.21.65.183
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XfxH2IJVi0h.PANel1-cc4.woRKERS.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/apOdRDudMCBmtGAZtJIEqy6
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 108
+  type: trojan
+  server: 104.24.80.96
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: aP1o50xFXh2IjVI0h.pAnel1-Cc4.WORkeRs.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/isMK2Lq5Hs4h5UAGFA94f7VTsWG8z
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 109
+  type: trojan
+  server: 104.16.66.163
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: ap1O50XFxh2iJvI0h.PAneL1-Cc4.WoRKerS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/bHexEW4sQYJN9CmPKjH
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 110
+  type: trojan
+  server: 104.25.97.238
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: AP1o50xFxH2IJvi0H.PANEl1-Cc4.WORkeRS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/xXzMRM54QfRTCjOCnzy
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 111
+  type: trojan
+  server: 104.19.198.87
+  port: 443
+  ip-version: ipv4
+  tfo: true
+  udp: false
+  password: RDqgbl3c0!9cp:t&s_
+  tls: true
+  sni: Ap1O50XFXH2IJVI0H.pANEl1-cC4.WORKeRs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /tr/CWMeo6rJ1BbaAUoPbRiCD6H
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: ap1o50xfxh2ijvi0h.panel1-cc4.workers.dev
+proxy-groups:
+- name: 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃
+  type: select
+  proxies:
+  - ⚡ انتخاب خودکار
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 01
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 02
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 03
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 04
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 05
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 06
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 07
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 08
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 09
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 10
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 11
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 12
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 13
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 14
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 15
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 16
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 17
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 18
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 19
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 20
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 21
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 22
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 23
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 24
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 25
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 26
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 27
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 28
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 29
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 30
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 31
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 32
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 33
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 34
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 35
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 36
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 37
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 38
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 39
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 40
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 41
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 42
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 43
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 44
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 45
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 46
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 47
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 48
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 49
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 50
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 51
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 52
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 53
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 54
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 55
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 56
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 57
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 58
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 59
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 60
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 61
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 62
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 63
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 64
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 65
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 66
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 67
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 68
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 69
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 70
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 71
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 72
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 73
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 74
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 75
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 76
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 77
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 78
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 79
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 80
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 81
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 82
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 83
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 84
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 85
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 86
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 87
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 88
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 89
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 90
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 91
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 92
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 93
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 94
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 95
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 96
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 97
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 98
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 99
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 100
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 101
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 102
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 103
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 104
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 105
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 106
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 107
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 108
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 109
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 110
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 111
+- name: ⚡ انتخاب خودکار
+  type: url-test
+  proxies:
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 01
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 02
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 03
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 04
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 05
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 06
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 07
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 08
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 09
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 10
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 11
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 12
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 13
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 14
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 15
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 16
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 17
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 18
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 19
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 20
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 21
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 22
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 23
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 24
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 25
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 26
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 27
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 28
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 29
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 30
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 31
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 32
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 33
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 34
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 35
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 36
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 37
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 38
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 39
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 40
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 41
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 42
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 43
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 44
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 45
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 46
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 47
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 48
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 49
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 50
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 51
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 52
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 53
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 54
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 55
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 56
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 57
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 58
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 59
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 60
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 61
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 62
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 63
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 64
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 65
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 66
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 67
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 68
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 69
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 70
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 71
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 72
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 73
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 74
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 75
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 76
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 77
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 78
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 79
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 80
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 81
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 82
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 83
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 84
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 85
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 86
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 87
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 88
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 89
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 90
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 91
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 92
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 93
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 94
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 95
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 96
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 97
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 98
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 99
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 100
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 101
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 102
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 103
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 104
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 105
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 106
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 107
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 108
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 109
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 110
+  - 𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃 111
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+rules:
+- GEOIP,LAN,DIRECT
+- MATCH,𝔸𝕣𝕤𝕖𝕟𝕍ℙℕ𓄂𓆃
